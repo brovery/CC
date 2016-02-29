@@ -1,6 +1,74 @@
-<div class="alert alert-success">
-    <h3>homeController as hc</h3>
-    <input type="text" ng-model="hc.sometext" ng-change="hc.updateText()" />
-    <h4>hc.sometext: <span ng-bind="hc.sometext"></span></h4>
-    <button ng-click="hc.clearText()">Clear</button>
+<div class="alert alert-success row">
+    <h3>Enter data here</h3>
+
+    <button class="btn btn-primary" ng-click="hc.createData()">Create Data</button>
+
+    <br>
+    <form class="form-inline">
+        <div ng-repeat="newData in hc.newData">
+            Level:
+            <select class="form-control" ng-model="newData.Level">
+                <option>I</option>
+                <option>II</option>
+                <option>III</option>
+                <option>IV</option>
+            </select>
+            Color:
+            <select class="form-control" ng-model="newData.ChestColor">
+                <option>Green</option>
+                <option>Blue</option>
+                <option>Purple</option>
+            </select>
+            <br>
+            R1 Items:<input type="number" ng-model="newData.R1Num">
+            R1 Type:
+            <select class="form-control" ng-model="newData.R1Type">
+                <option>Slime</option>
+                <option>Crystal Ooze</option>
+                <option>Hero Slot Card</option>
+                <option>Dungeon Entry</option>
+                <option>Shard Pack I</option>
+                <option>Shard Pack II</option>
+                <option>Quest Refresh</option>
+                <!--<option></option>-->
+                <!--<option></option>-->
+                <!--<option></option>-->
+                <!--<option></option>-->
+                <!--<option></option>-->
+                <!--<option></option>-->
+                <!--<option></option>-->
+                <!--<option></option>-->
+                <!--<option></option>-->
+                <!--<option></option>-->
+            </select>
+            R2 Items:<input type="number" ng-model="newData.R2Num">
+            R2 Type:
+            <select class="form-control" ng-model="newData.R2Type">
+                <option>Slime</option>
+                <option>Crystal Ooze</option>
+                <option>Hero Slot Card</option>
+                <option>Dungeon Entry</option>
+                <option>Shard Pack I</option>
+                <option>Shard Pack II</option>
+                <option>Quest Refresh</option>
+                <!--<option></option>-->
+                <!--<option></option>-->
+                <!--<option></option>-->
+                <!--<option></option>-->
+                <!--<option></option>-->
+                <!--<option></option>-->
+                <!--<option></option>-->
+                <!--<option></option>-->
+                <!--<option></option>-->
+                <!--<option></option>-->
+            </select>
+        </div>
+        <button class="btn btn-info" ng-click="hc.newData.push({Level:'', ChestColor:'', R1Num: 0, R1Type: '', R2Num: 0, R2Type: ''})">
+            Add a chest
+        </button>
+
+    </form>
+    <button class="btn btn-warning" ng-click="hc.addData()">Add Data</button>
+
+
 </div>

@@ -5,7 +5,9 @@
         "ui.router",
         "navController",
         "homeController",
-        "homeService"
+        "homeService",
+        "firebase",
+        "tableController"
     ])
 
     .config(["$stateProvider", "$urlRouterProvider",
@@ -18,9 +20,10 @@
                     templateUrl: "templates/home.html",
                     controller: "homeController as hc"
                 })
-                .state("about", {
-                    url: "/about",
-                    templateUrl: "templates/about.html"
+                .state("table", {
+                    url: "/table",
+                    templateUrl: "templates/table.html",
+                    controller: "tableController as tc"
                 });
 
             // if none of the above states are matched, use this as the fallback
