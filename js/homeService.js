@@ -15,6 +15,61 @@
         hs.data = $firebaseArray(smRef);
         hs.createData = createData;
         hs.addData = addData;
+        hs.calculateData = calculateData;
+        hs.averagesData = {
+            LevelI: {
+                Chests: {
+                    Green: {
+                        shardValue: 0
+                    },
+                    Blue: {
+                        shardValue: 0
+                    },
+                    Purple: {
+                        shardValue: 0
+                    }
+                }
+            },
+            LevelII: {
+                Chests: {
+                    Green: {
+                        shardValue: 0
+                    },
+                    Blue: {
+                        shardValue: 0
+                    },
+                    Purple: {
+                        shardValue: 0
+                    }
+                }
+            },
+            LevelIII: {
+                Chests: {
+                    Green: {
+                        shardValue: 0
+                    },
+                    Blue: {
+                        shardValue: 0
+                    },
+                    Purple: {
+                        shardValue: 0
+                    }
+                }
+            },
+            LevelIV: {
+                Chests: {
+                    Green: {
+                        shardValue: 0
+                    },
+                    Blue: {
+                        shardValue: 0
+                    },
+                    Purple: {
+                        shardValue: 0
+                    }
+                }
+            }
+        };
 
 
         // define functions
@@ -32,6 +87,13 @@
 
         function addData(obj) {
             hs.data.$add(obj);
+        }
+
+        function calculateData() {
+            for (var i = 0; i < hs.data.length; i++) {
+                
+            }
+
         }
     }
 
