@@ -1,21 +1,34 @@
 <div class="alert alert-info row">
-    <h3>Average Results</h3>
+    <h3>Average Shard Value Per Chest</h3>
+    <span>Note: The values of some items, such as the Quest Refresh cards, were estimated based on a 75,000-might player.</span>
 
     <table class="table table-bordered">
-        <th>Green I</th>
-        <th>Blue I</th>
-        <th>Purple I</th>
-        <th>Green II</th>
-        <th>Blue II</th>
-        <th>Purple II</th>
-        <th>Green III</th>
-        <th>Blue III</th>
-        <th>Purple III</th>
-        <th>Green IV</th>
-        <th>Blue IV</th>
-        <th>Purple IV</th>
-
-
-
+        <tr>
+            <th>Desc.</th>
+            <th>Green I</th>
+            <th>Blue I</th>
+            <th>Purple I</th>
+            <th>Green II</th>
+            <th>Blue II</th>
+            <th>Purple II</th>
+            <th>Green III</th>
+            <th>Blue III</th>
+            <th>Purple III</th>
+            <th>Green IV</th>
+            <th>Blue IV</th>
+            <th>Purple IV</th>
+        </tr>
+        <tr>
+            <th>Quantity</th>
+            <td ng-repeat="average in tc.averages">
+                {{ average.quantity }}
+            </td>
+            </tr>
+        <tr>
+            <th>Average</th>
+            <td ng-repeat="average in tc.averages">
+                {{ average.average.toFixed(2) }}
+            </td>
+        </tr>
     </table>
 </div>
