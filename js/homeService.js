@@ -56,6 +56,7 @@
         function addData(obj) {
             hs.data.$add(obj).then(function() {
                 calculateData();
+                console.log("data added!");
             });
         }
 

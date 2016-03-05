@@ -26,12 +26,11 @@
         }
 
         function addData() {
-            var newData = [];
             for (var i = 0; i < hc.newData.length; i++) {
                 homeService.addData(hc.newData[i]);
             }
 
-            //homeService.addData();
+            hc.newData = [];
         }
 
 
